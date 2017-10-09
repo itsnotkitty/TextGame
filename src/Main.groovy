@@ -28,7 +28,7 @@ Room room5 = new Room(
         description: "Welcome to the End of everything as we know it, sad times ahead. Turn Back"
 )
 
-Map<String,Room> [room1:1,room2:2,room3:3,room4:4,room5:5]
+Map<Room;Integer> ['room1':1,'room2':2,'room3':3,'room4':4,'room5':5]
 
 Boolean keepPlaying = true
 while (keepPlaying) (
