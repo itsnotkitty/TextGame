@@ -28,10 +28,10 @@ Room room5 = new Room(
         description: "Welcome to the End of everything as we know it, sad times ahead. Turn Back"
 )
 
-Map<Room;Integer> ['room1':1,'room2':2,'room3':3,'room4':4,'room5':5]
+Map<Room;Integer> [room1:1,room2:2,room3:3,room4:4,room5:5]
 
 Boolean keepPlaying = true
-while (keepPlaying) (
+while (keepPlaying) {
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
 print "Enter room number: "
 def userInput = br.readLine()
@@ -42,5 +42,7 @@ def userInput = br.readLine()
         println "please enter a number"
     } else if (!userInput.isInteger()) {
         println "I can't do that dave"
+    } else if (Room) {
+        println "Welcome to" + room.title
     }
-)
+}
