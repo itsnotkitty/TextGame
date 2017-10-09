@@ -46,6 +46,7 @@ def userInput = br.readLine()
         Room room = rooms.get(userInput as Integer)
         if (room) {
             println "welcome to " + room.title
+            println room.description
             } else {
                 println "You find yourself in a void"
             }
