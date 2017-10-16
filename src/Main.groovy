@@ -1,31 +1,36 @@
 Room room1 = new Room(
         roomId: 1,
         title: "Room of Doom",
-        description: "A sign lay in the middle of the room, the sign belays your doom "
+        description: "A sign lay in the middle of the room, the sign belays your doom ",
+        Exit: "a door lies to the South"
 )
 
 Room room2 = new Room(
         roomId: 2,
         title: "Room of Boom",
-        description: "You smell gasoline, be careful with that torch!"
+        description: "You smell gasoline, be careful with that torch!",
+        Exit: "doors lay to the North and west"
 )
 
 Room room3 = new Room(
         roomId: 3,
         title: "Room of Salvation",
-        description: "The room is empty save for a single font of water"
+        description: "The room is empty save for a single font of water",
+        Exit: "Doors lay to the east and North"
 )
 
 Room room4 = new Room(
         roomId: 4,
         title: "Room of Bloom",
-        description: "a field of flowers lay before you. No one how they grow down here in the dark"
+        description: "a field of flowers lay before you. No one how they grow down here in the dark",
+        Exit:  "a Doors lay to the South and west"
 )
 
 Room room5 = new Room(
         roomId: 5,
         title: "The End of all things",
-        description: "sad times ahead. Turn Back"
+        description: "sad times ahead. Turn Back",
+        Exit: "doors lay to the"
 )
 
 Map<Integer,Room> rooms = [1:room1,2:room2,3:room3,4:room4,5:room5]
