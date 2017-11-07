@@ -39,6 +39,7 @@ room5.connections = ["e":room4]
 Boolean keepPlaying = true
 Room currentRoom = room1
 
+
 while (keepPlaying) {
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
 
