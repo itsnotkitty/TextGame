@@ -1,6 +1,4 @@
 class Npc extends Person {
-    List<String> dialogue = [
-            "Howdy!",
+   Map<String,Integer> messages
 
-    ]
 }
