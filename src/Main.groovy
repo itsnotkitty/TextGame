@@ -34,7 +34,40 @@ room3.connections = ["e":room2,"n":room4]
 room4.connections = ["s":room3,"w":room5]
 room5.connections = ["e":room4]
 
+Person soothSayer = new Person(
+        name: "Old SoothSayer",
+        healthPool: 10,
+        hostile: false,
+        multiplier: 10,
+)
 
+Person sleepingDog = new Person(
+        name: "Sleeping Dog",
+        healthPool: 20,
+        hostile: true,
+        multiplier: 2,
+)
+
+Person manEatingPlant = new Person(
+        name: "Voracious Man Eating Pant",
+        healthPool: 50,
+        hostile: true,
+        multiplier: 4,
+)
+
+Person bigBoss = new Person(
+        name: "the Eternal Demon",
+        healthPool: 100,
+        hostile: true,
+        multiplier: 6,
+)
+
+Person fairy = new Person(
+        name: "Kindly Fairy",
+        healthPool: 1,
+        hostile: false,
+        multiplier: 10,
+)
 
 Boolean keepPlaying = true
 Room currentRoom = room1
