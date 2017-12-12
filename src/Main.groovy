@@ -20,7 +20,7 @@ Person manEatingPlant = new Person(
 )
 
 Person bigBoss = new Person(
-        name: "the Eternal Demon",
+        name: "Eternal Demon",
         healthPool: 100,
         hostile: true,
         multiplier: 6,
@@ -75,6 +75,12 @@ room4.connections = ["s":room3,"w":room5]
 room5.connections = ["e":room4]
 
 import java.util.Random
+Random rand = new Random()
+int max = 10
+def randomIntegerList = []
+(1).each {
+    randomIntegerList << rand.nextInt(max) + 1
+}
 
 Boolean keepPlaying = true
 Room currentRoom = room1
@@ -87,22 +93,20 @@ println "Welcome to " + currentRoom.title
 
 println currentRoom.description
 
-println healthPool
+println "Hp " + healthPool
 
 println "In the center of the room you see the " + currentRoom.monster.name
 
 println "Doors are located to the" + currentRoom.connections.keySet()
 def userInput = br.readLine()
+    println "quitting"
     if (userInput == 'q') {
-        println "quitting"
         keepPlaying = false
     } else if (!userInput) {
         println "All you can find is a blank wall, look else where!"
     } else {
         Room room = currentRoom.connections.get(userInput)
         if (room) {
-            Random rand = new Random()
-            int max = 10
             currentRoom = room
             } else {
                 println "This action is unavailable"
