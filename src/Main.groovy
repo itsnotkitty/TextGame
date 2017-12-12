@@ -105,6 +105,12 @@ def userInput = br.readLine()
     } else if (!userInput) {
         println "All you can find is a blank wall, look else where!"
     } else {
+        currentRoom.monster.hostile = true
+        randomIntegerList = (
+                it % 2
+        )
+        Integer damage = randomIntegerList * currentRoom.monster.multiplier
+        println currentRoom.monster.name + "hit you for " + (healthPool - damage)
         Room room = currentRoom.connections.get(userInput)
         if (room) {
             currentRoom = room
