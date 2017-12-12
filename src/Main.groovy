@@ -74,21 +74,11 @@ room3.connections = ["e":room2,"n":room4]
 room4.connections = ["s":room3,"w":room5]
 room5.connections = ["e":room4]
 
-
-
 import java.util.Random
-Random rand = new Random()
-int max = 10
-def randomIntegerList = []
-(1..10).each {
-    randomIntegerList << rand.nextInt(max) + 1 //This creates a random number between 1 and 10
-}
-println randomIntegerList
-
 
 Boolean keepPlaying = true
 Room currentRoom = room1
-
+Integer healthPool = 100
 
 while (keepPlaying) {
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
@@ -96,6 +86,10 @@ BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
 println "Welcome to " + currentRoom.title
 
 println currentRoom.description
+
+println healthPool
+
+println "In the center of the room you see the " + currentRoom.monster.name
 
 println "Doors are located to the" + currentRoom.connections.keySet()
 def userInput = br.readLine()
@@ -107,6 +101,8 @@ def userInput = br.readLine()
     } else {
         Room room = currentRoom.connections.get(userInput)
         if (room) {
+            Random rand = new Random()
+            int max = 10
             currentRoom = room
             } else {
                 println "This action is unavailable"
