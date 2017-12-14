@@ -77,14 +77,11 @@ room5.connections = ["e":room4]
 import java.util.Random
 Random rand = new Random()
 int max = 10
-def randomIntegerList = []
-(1).each {
-    randomIntegerList << rand.nextInt(max) + 1
-}
 
 Boolean keepPlaying = true
 Room currentRoom = room1
 Integer healthPool = 100
+// possible place to set max health integer, or is there a way to set it when I defined the health
 
 while (keepPlaying) {
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
@@ -105,16 +102,17 @@ def userInput = br.readLine()
     } else if (!userInput) {
         println "All you can find is a blank wall, look else where!"
     } else {
-        currentRoom.monster.hostile = true
-        randomIntegerList = (
-                it % 2
-        )
-        Integer damage = randomIntegerList * currentRoom.monster.multiplier
-        println currentRoom.monster.name + "hit you for " + (healthPool - damage)
+       /* it is at this point that I intended to get a random "hit" value to roll but was unable to figure out random numbers
+       if currentRoom.monster.hostile = true*/
         Room room = currentRoom.connections.get(userInput)
         if (room) {
             currentRoom = room
-            } else {
+            } /* following this part i inteded to place an if "hit" did jnjot equal odd or hit( % =/= 2)
+        damage = randomIntegerList * currentRoom.monster.multiplier
+        println currentRoom.monster.name + "hit you for " + (healthPool - damage) followed by an if statement of (healthpool == 0)
+         I know I would have to set a way to make sure the health stays set at the current number rahter than reverting to 100 every room change
+         {keepPlaying = false} followed by an else if
+         statement of hit( % == 2) prntln "you regenerated health" + (healthPool + Damage) */    else {
                 println "This action is unavailable"
             }
         }
